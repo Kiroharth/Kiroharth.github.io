@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(/Images/pink.png);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+
+.homeicon{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.taskbar {
+    background-color: #f3a3ec;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 999; /* Ensure taskbar appears above other elements */
+}
+
+.start {
+    background-color: #d351b2;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 40px;
+    font-size: 20px;
+    display: flex; 
+    align-items: center;
+    font-family: "Pixelify Sans", sans-serif;
+    box-shadow: 3px 3px #888888;
+}
+
+.start:hover {
+    background-color: #d56af0;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 70px; /* Adjusted to account for taskbar height */
+    margin-left: 12px;
+    position: fixed;
+    left: 0;
+    z-index: 1; /* Ensure nav appears below taskbar */
+}
+
+.shop,
+.art,
+.yt,
+.twitch,
+.twitter {
+    display: block;
+    width: 75px;
+    height: 50px;
+    font-size: 40px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    /* display: flex;  */
+    align-items: center;
+    
+}
+
+.shop:hover,
+.art:hover,
+.yt:hover,
+.twitch:hover,
+.twitter:hover {
+    background-color: rgba(236, 150, 203, 0.74);
+}
+
+.shop:active,
+.art:active,
+.yt:active,
+.twitch:active,
+.twitter:active {
+    background-color: rgb(211, 134, 182);
+}
+
+.shopicon{
+    height: 50px;
+    width: 50px;
+}
+
+.twittericon{
+    height: 50px;
+    width: 50px;
+
+}
+
+.articon{
+    height: 50px;
+    width: 50px;
+
+}
+
+.yticon{
+    height: 50px;
+    width: 55px;
+
+}
+
+.twitchicon{
+    height: 50px;
+    width: 55px;
+
+}
