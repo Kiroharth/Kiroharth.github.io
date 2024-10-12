@@ -7,10 +7,11 @@ const LogoBox = styled.span`
     font-weight: bold;
     font-size: 18px;
     display: inline-flex;
-    align-itmes: center;
-    height: 50px;
+    align-items: center;
+    height: 20px;
     line-height: 20px
     padding: 10px
+    
 
     &:hover img {
         transform: rotate(20deg);
@@ -18,12 +19,17 @@ const LogoBox = styled.span`
 `
 
 const Logo = ( ) => {
-    const footPrintImg = `/Images/Logo${useColorModeValue('', '-dark')}.png`
+    const footPrintImg = `/images/logo${useColorModeValue('', '-dark')}.svg`;
     return (
         <Link href="/">
                 <LogoBox>
-                    <Image src={footPrintImg} width={50} height={50} alt='logo' />
-                    <Text color={useColorModeValue('gray.800', 'whiteAlpha.900')} fontFamily='M PLUS Rounded 1c' fontWeight="bold" ml={3} marginTop={3.5}>
+                    <Image src={footPrintImg} 
+                    width={20} 
+                    height={20} 
+                    alt='logo'
+                    style={{ transform: 'scale(4)', transformOrigin: 'center' }}
+                    />
+                    <Text color={useColorModeValue('gray.800', 'whiteAlpha.900')} fontFamily='M PLUS Rounded 1c' fontWeight="bold" ml={3} marginTop={0}>
                         Kashirin Kito
                     </Text>
                 </LogoBox>
