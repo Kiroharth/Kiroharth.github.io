@@ -61,6 +61,9 @@ const Navbar = props => {
                 flexGrow={1}
                 mt={{base: 4, nmd: 0}}
                 >
+                    <LinkItem href="/about" path={path}>
+                    About
+                    </LinkItem>
                     <LinkItem href="/works" path={path}>
                     Works
                     </LinkItem>
@@ -73,6 +76,18 @@ const Navbar = props => {
                     <Box ml={2} display={{base: 'inline-block', md: 'none'}}>
                         <Menu>
                             <MenuButton as={IconButton} icon={<HamburgerIcon/>} variant='outline' aria-label="Options"/>
+                            <MenuList>
+                            <NextLink href="/about" passHref>
+                                    <MenuItem as={Link}>About</MenuItem>
+                                </NextLink>
+                                <NextLink href="/works" passHref>
+                                    <MenuItem as={Link}>Works</MenuItem>
+                                </NextLink>
+                                <NextLink href="/posts" passHref>
+                                    <MenuItem as={Link}>Posts</MenuItem>
+                                </NextLink>
+                                <MenuItem as={Link} href="https://github.com/Kiroharth">GitHub</MenuItem>
+                            </MenuList>
                         </Menu>
                     </Box>
                 </Box>
