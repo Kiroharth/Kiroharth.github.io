@@ -18,7 +18,7 @@ body {
 .tile {
     /*background-color: #cdaad8; /* Light gray background */
     border-radius: 0.5rem; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(216, 187, 216, 0.705); /* Subtle shadow for depth */
+    box-shadow: 0 4px 8px rgba(145, 107, 196, 0.705); /* Subtle shadow for depth */
     width: calc(25% - 20px); /* Adjust width as needed */
     box-sizing: border-box; /* Include padding and border in width calculation */
     flex-grow: 1; /* Allow tiles to grow and fill available space */
@@ -37,7 +37,8 @@ body {
     transition: background-color 0.2s ease; /* Smooth hover transition */
 }
 .tile-content-text button:hover {
-    background-color: #a04ee4; 
+    background-color: #8b1fe4;
+    color: #ffff; 
 }
 /*
 Specific Styling (Text, Images ...)
@@ -47,12 +48,12 @@ Specific Styling (Text, Images ...)
     font-weight: 900;
     font-size: 200%;
     color: #fff;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 25px #ff00de, 0 0 30px #ff00de, 0 0 35px #ff00de;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #9b43e4, 0 0 25px #7628b6, 0 0 30px #71269c, 0 0 35px #7614b8;
     animation: glow 3s ease-in-out infinite alternate;
 }
 @keyframes glow {
     to {
-      text-shadow: 0 0 10px #fff, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 60px #ff00de, 0 0 70px #ff00de;
+      text-shadow: 0 0 10px #fff, 0 0 20px #9f0cda, 0 0 30px #710cb4, 0 0 40px #540bb3, 0 0 50px #802ac7, 0 0 60px #9111cc, 0 0 70px #8328eb;
     }
 }
 
