@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <title>Secure Project Dashboard</title>
+    <title>Login</title>
     <script type="module">
         
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
@@ -56,9 +56,8 @@
         };
     </script>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        body { font-family: Arial, sans-serif; text-align: center; padding: 10px; }
         .hidden { display: none; }
-        button { padding: 10px 20px; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -67,8 +66,8 @@
     <div id="login-section" class="login-section">
         <h2>Login To Access The Stock Project</h2>
         <div class="login-fields">
-            <input type="email" id="email" placeholder="Enter Email"><br><br>
-            <input type="password" id="password" placeholder="Enter Password"><br><br>
+            <input type="email" id="email" placeholder="Email"><br><br>
+            <input type="password" id="password" placeholder="Password"><br><br>
             <button onclick="login()">Login</button>
             <p id="error-message" class="error hidden"></p>
         </div>

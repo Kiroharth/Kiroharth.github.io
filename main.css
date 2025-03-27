@@ -73,6 +73,9 @@ body {
 }
 
 .login-section button {
+    margin-top: 5px;
+    width: 10%;
+    text-align: center;
     font-size: 80%;
     font-weight: bold;
     background-color: #fefeff;
@@ -82,6 +85,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s ease; /* Smooth hover transition */
+    overflow: hidden;
 }
 
 .login-section button:hover {
@@ -97,6 +101,7 @@ body {
     border-radius: 5px;
     font-size: 16px;
     transition: border 0.3s ease;
+    text-align: center;
 }
 
 .login-section input:focus {
@@ -105,14 +110,21 @@ body {
     -moz-box-shadow: 0px 0px 24px 1px rgba(156,69,214,0.79);
     box-shadow: 0px 0px 24px 1px rgba(156,69,214,0.79);
     outline: none;
+    overflow: hidden;
 }
 
 .login-section input::placeholder {
+    text-align: center;
+    overflow: hidden;
     color:rgba(0, 0, 0, 0.397) ;
 }
 
+.login-section input:focus::placeholder {
+    color: transparent;
+}
+
 .login-fields {
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 /*
