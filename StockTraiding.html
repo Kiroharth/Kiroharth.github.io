@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Secure Project Dashboard</title>
+    <script type="module">
+        
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyBixwyE9HauEOsxsndWSGNk6HPF4Ph-WWM",
+            authDomain: "dashboard-4f61e.firebaseapp.com",
+            projectId: "dashboard-4f61e",
+        };
+
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        
+        window.login = function() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error-message");
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    document.getElementById("login-section").style.display = "none";
+                    document.getElementById("dashboard").style.display = "block";
+                    errorMessage.textContent = "";
+                })
+                .catch((error) => {
+                    alert("Incorrect login details");
+                    if (error.code === "auth/user-not-found") {
+                        errorMessage.textContent = "User not found. Please check your email.";
+                    } else if (error.code === "auth/wrong-password") {
+                        errorMessage.textContent = "Incorrect password. Please try again.";
+                    } else if (error.code === "auth/invalid-email") {
+                        errorMessage.textContent = "Invalid email format.";
+                    } else {
+                        errorMessage.textContent = "Login failed. Please try again.";
+                    }
+                    errorMessage.style.display = "block";
+                });
+        };
+
+        window.logout = function() {
+            signOut(auth).then(() => {
+                document.getElementById("login-section").style.display = "block";
+                document.getElementById("dashboard").style.display = "none";
+            });
+        };
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        .hidden { display: none; }
+        button { padding: 10px 20px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <!-- Login Section -->
+    <div id="login-section" class="login-section">
+        <h2>Login To Access The Stock Project</h2>
+        <div class="login-fields">
+            <input type="email" id="email" placeholder="Enter Email"><br><br>
+            <input type="password" id="password" placeholder="Enter Password"><br><br>
+            <button onclick="login()">Login</button>
+            <p id="error-message" class="error hidden"></p>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="hidden">
+        <h2>Welcome to Your Project Dashboard</h2>
+        <p>Here you can manage your personal projects securely.</p>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+</body>
+</html>

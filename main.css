@@ -28,7 +28,7 @@ body {
 .tile-content-text button {
     font-size: 80%;
     font-weight: bold;
-    background-color: #fefeff; /* Blue button color */
+    background-color: #fefeff;
     color: black;
     border: none;
     padding: 10px 20px;
@@ -40,6 +40,81 @@ body {
     background-color: #8b1fe4;
     color: #ffff; 
 }
+.section-tile {
+    display: flex;
+    justify-content: center;
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(198, 174, 230, 0.705); /* Subtle shadow for depth */
+    margin: 0 2% 0;
+}
+.section-title {
+    color: #ffff;
+    font-weight: bold;
+}
+
+.login-section {
+    color: #ffff;
+}
+
+.error hidden {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+.login-section h2 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 900;
+    font-size: 200%;
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #9b43e4, 0 0 25px #7628b6, 0 0 30px #71269c, 0 0 35px #7614b8;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+.login-section button {
+    font-size: 80%;
+    font-weight: bold;
+    background-color: #fefeff;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* Smooth hover transition */
+}
+
+.login-section button:hover {
+    background-color: #8b1fe4;
+    color: #ffff; 
+}
+
+.login-section input {
+    width: 25%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.login-section input:focus {
+    border-color: #db91e2;
+    -webkit-box-shadow:0px 0px 24px 1px rgba(156,69,214,0.79);
+    -moz-box-shadow: 0px 0px 24px 1px rgba(156,69,214,0.79);
+    box-shadow: 0px 0px 24px 1px rgba(156,69,214,0.79);
+    outline: none;
+}
+
+.login-section input::placeholder {
+    color:rgba(0, 0, 0, 0.397) ;
+}
+
+.login-fields {
+    margin-top: 5rem;
+}
+
 /*
 Specific Styling (Text, Images ...)
 */
